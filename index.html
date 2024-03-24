@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <header>
+    <h1>Welcome to the Quiz</h1>
+  </header>
+  <main>
+    <section id="quiz">
+      <h2>Quiz</h2>
+      <input type="text" id="userName1" style="display:block" placeholder="Enter your name">
+      <button id="startButton" style="display:block">Start Quiz</button>
+      <div id="question"></div>
+      <div id="options"></div>
+      <div id="resultContainer"></div>
+      <div id="scoreDisplay" style="display: none;">Score: 0/10</div>
+
+      <div id="loadingQuestion" class="loading" style="margin-top: 20px;"></div>
+      <p id =question style="display:none;">Preparing Questions...</p>
+<div id="loadingLeaderboard" class="loading style="margin-top: 20px;"></div>
+
+    </section>
+  
+  </main>
+  
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
