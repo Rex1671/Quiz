@@ -38,7 +38,7 @@ async function fetchQuizQuestionsFromAPI() {
 
 async function displayNextQuestion() {
     try {
-        if (currentQuestionIndex <2) { 
+        if (currentQuestionIndex <10) { 
             const questionObj = quizQuestions[currentQuestionIndex];
 
             const decodedQuestion = decodeURIComponent(questionObj.question);
@@ -98,7 +98,7 @@ function handleAnswer(selectedOption, correctAnswer) {
 
     setTimeout(() => {
         displayNextQuestion();
-    }, 200);
+    }, 800);
 }
 
 async function displayResult(userName) {
@@ -118,7 +118,7 @@ async function displayResult(userName) {
 
    
     displayLeaderboard(userName);
-    hideLoading(loadingLeaderboard);
+    hideLoading(loadingQuestion);
 }
 
 async function updateLeaderboard(userName, score) {
